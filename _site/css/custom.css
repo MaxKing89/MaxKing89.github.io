@@ -132,17 +132,3 @@ body {
     margin-top: 120px;
   }
 }
-
-/****************************** Navbar shrink and animation ******************************/
-/*shink*/
-nav.navbar.shrink {
-  min-height: 35px;
-}
-
-/*animation*/
-nav.navbar{
-  background-color:#ccc;
-   // Animation
-   -webkit-transition: all 0.4s ease;
-   transition: all 0.4s ease;
-}
