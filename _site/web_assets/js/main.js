@@ -9,6 +9,7 @@ $(window).scroll(function() {
 
 
 
+
 //quiz question and answers
 var questions = [{
     question: "What is Max's Favorite Sport?",
@@ -45,7 +46,7 @@ var questions = [{
 //first function for question 1
 function showBuilder(question, answer, wrongAnswer1, wrongAnswer2, wrongAnswer3, picture){
     
-    $('#question-first').html('<div><h1>' + question + '</h1><button type="button" class="btn btn-primary btn-lg btn-block" onclick="getAnswer('+ answer + ' )">' + answer + '</button><button type="button" class="btn btn-primary btn-lg btn-block">' + wrongAnswer1 + '</button><button type="button" class="btn btn-primary btn-lg btn-block">' + wrongAnswer2 + '</button><button type="button" class="btn btn-primary btn-lg btn-block">' + wrongAnswer3+ '</button></div>');
+    $('#question-first').html('<div><h1>' + question + '</h1><button type="button" class="btn btn-primary btn-lg btn-block answer" id="1" onclick="magicMaker(this.id)">' + answer + '</button><button type="button" class="btn btn-primary btn-lg btn-block" id="2" onclick="magicMaker(this.id)">' + wrongAnswer1 + '</button><button type="button" class="btn btn-primary btn-lg btn-block" id="3" onclick="magicMaker(this.id)">' + wrongAnswer2 + '</button><button type="button" class="btn btn-primary btn-lg btn-block" id="4" onclick="magicMaker(this.id)">' + wrongAnswer3+ '</button></div>');
 }
 //function to build all other questions that will default as hidden
 function hideBuilder(question, answer, wrongAnswer1, wrongAnswer2, wrongAnswer3, picture){
@@ -53,6 +54,7 @@ function hideBuilder(question, answer, wrongAnswer1, wrongAnswer2, wrongAnswer3,
     $('.questions-' + length).append('<div><h1>' + question + '</h1><button type="button" class="btn btn-primary btn-lg btn-block">' + answer + '</button><button type="button" class="btn btn-primary btn-lg btn-block">' + wrongAnswer1 + '</button><button type="button" class="btn btn-primary btn-lg btn-block">' + wrongAnswer2 + '</button><button type="button" class="btn btn-primary btn-lg btn-block">' + wrongAnswer3+ '</button></div>');
 }
 
+//create divs
 function createDivs(length){
     console.log('length is  ' + length);
     for(i = 0; i < length; length--){
@@ -60,13 +62,48 @@ function createDivs(length){
         console.log(length + " iterations");
     }
 }
+//return the answer for the current element
+function getAnswer(){
+   var currentAnswer = $('.answer').html();
+    console.log(currentAnswer + " is the current answer");
+    alert(currentAnswer);
+    return currentAnswer;
+}
 
+//return the clicked function html
+function getElem(clickedElem){
+    var thisElement = $('#' + clickedElem).html();
+    console.log(thisElement + " is the current element");
+    alert(thisElement);
+    return thisElement;
+}
+
+function showNext(){
+    $('id="questions-' + length +'"').remove('.hide');
+}
+
+//compare the answer to the element html
+function magicMaker(clicked_ID){
+    theAnswer = getAnswer();
+    theElement = getElem(clicked_ID);
+    console.log("the answer is " + theAnswer);
+    console.log("the element is " + theElement);
+    
+    if(theAnswer === theElement){
+        alert("Awesome, you got it right!");
+        showNext(); 
+    } else {
+        alert("Sorry thats not the right answer");
+    }
+}
+
+
+//add the selected class
 $('#question-first').click(function(){
     $(this).addClass('selected');
   });
 
 var length = questions.length;
-alert(length);
 
 var counter = 0;
 
