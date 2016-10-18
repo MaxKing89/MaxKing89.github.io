@@ -18,13 +18,49 @@ layout: page
             <div class= "question" id="question-1">
                 
                 <h2>Question 1: What is Max's favorite sport?</h2>
-                    <button type="button" class="btn btn-primary btn-lg btn-block" id="Q1A1">Hockey</button>
-                    <button type="button" class="btn btn-primary btn-lg btn-block" id="Q1A2">Soccer</button>
-                    <button type="button" class="btn btn-primary btn-lg btn-block" id="Q1A3">Football</button>
-                    <button type="button" class="btn btn-primary btn-lg btn-block" id="Q1A4">Spelunking</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" id="Q1A1" onclick="checkResponse(this)">Hockey</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" id="Q1A2" onclick="checkResponse(this)">Soccer</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" id="Q1A3" onclick="checkResponse(this)">Football</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" id="Q1A4" onclick="checkResponse(this)">Spelunking</button>
+                    
+                    <!-- Right Modal -->
+                        <div class="modal fade" id="myModal-1-correct" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Correct!</h4>
+                              </div>
+                              <div class="modal-body">
+                                ...
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal" onclick="hideShow()">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!-- Wrong Modal -->
+                        <div class="modal fade" id="myModal-1-wrong" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">Sorry That is incorrect</h4>
+                              </div>
+                              <div class="modal-body">
+                                <h3>Please try again</h3>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
             </div>
             
-            <div class= "question" id="question-2">
+            <div class= "question hide" id="question-2">
                 
                 <h2>Question 2: What do I want for my next car?</h2>
                     <button type="button" class="btn btn-primary btn-lg btn-block" id="Q2A1">Porsche Cayenne</button>
@@ -33,7 +69,7 @@ layout: page
                     <button type="button" class="btn btn-primary btn-lg btn-block" id="Q2A4">Audi R8</button>
             </div>
             
-            <div class= "question" id="question-3">
+            <div class= "question hide" id="question-3">
                 
                 <h2>Question 3: What was the best use of my money I have ever spent?</h2>
                     <button type="button" class="btn btn-primary btn-lg btn-block" id="Q3A1">New Macbook</button>
@@ -42,7 +78,7 @@ layout: page
                     <button type="button" class="btn btn-primary btn-lg btn-block" id="Q3A4">My Mustang GT</button>
             </div>
             
-            <div class= "question" id="question-4">
+            <div class= "question hide" id="question-4">
                 
                 <h2>Question 4: What is Max's favorite leisure activity?</h2>
                     <button type="button" class="btn btn-primary btn-lg btn-block" id="Q4A1">Snowboarding</button>

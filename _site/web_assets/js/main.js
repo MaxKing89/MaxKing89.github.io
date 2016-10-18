@@ -17,14 +17,71 @@ var answers = {
     
 }
 
+// end answer array
 
-function getElem(clickedElem){
-    var thisElement = $('#' + clickedElem).html();
-    console.log(thisElement + " is the current element");
-    alert(thisElement);
-    return thisElement;
+var counter = 1;
+
+
+
+function getAnswer(){
+    var answer = "answer";
+    var current = counter;
+    var currentAnswer = answer+counter;
+    var thisAnswer = answers[currentAnswer];
+    /*console.log(counter);
+    console.log(thisAnswer);
+    alert(thisAnswer);*/
+    return thisAnswer;
+    
 }
 
+function getResponse(el){
+   var userAnswer = el.innerHTML;
+    /*alert(userAnswer);
+    console.log(userAnswer);*/
+    return userAnswer;
+}
+
+
+
+
+function checkResponse(el){
+    var thisAnswer = getAnswer();
+    var param = el;
+    var thisResponse = getResponse(param);
+    
+    //if statement to compare to see if thisAnswer = this response
+    
+    if (thisAnswer === thisResponse){
+        var combinedRight = '#myModal-'+counter+'-correct';
+        //alert(combined);
+        $(combinedRight).modal('show');
+    	//alert("Awesome, you got the correct answer!");
+    }else {
+    	var combinedWrong = '#myModal-'+counter+'-wrong';
+        //alert(combined);
+        $(combinedWrong).modal('show');
+    	//alert("Awesome, you got the correct answer!");
+    }
+}
+
+
+//hide question after successfully answering it 
+    function hideQuestion(){
+         var questionToHide = '#question-'+counter;
+        $(questionToHide).hide();
+        counter++;
+    }
+
+function showNextQuestion(){
+            var questionToShow = '#question-'+counter;
+            $(questionToShow).removeClass('hide');
+        }
+
+function hideShow(){
+    hideQuestion();
+    showNextQuestion();
+}
 
 
 
