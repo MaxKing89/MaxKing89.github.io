@@ -44,32 +44,33 @@ function getResponse(el){
 }
 
 
-
+var numberOfAttempts =1;
 
 function checkResponse(el){
     var thisAnswer = getAnswer();
     var param = el;
     var thisResponse = getResponse(param);
-    var numberOfAttempts;
+   
     
     //if statement to compare to see if thisAnswer = this response
     
     if (thisAnswer === thisResponse){
-        var combinedRight = '#myModal-'+counter+'-correct';
+        var combinedRight = '#my-modal-'+counter+'-correct';
         //alert(combined);
         $(combinedRight).modal('show');
     	//alert("Awesome, you got the correct answer!");
-        alert(numberOfAttempts);
-        if(numberOfAttempts >0){
-            $( ".correct-answers" ).append( correctAnswers );
+        //alert(numberOfAttempts);
+        if(numberOfAttempts >1){
+             numberOfAttempts = 1;
         }else{
             correctAnswers++;
-            $( ".correct-answers" ).append( correctAnswers );
+           $( "#number-correct" ).remove(  );
+            $( ".number" ).append( '<div class="number-current" id="number-correct"><h4>' + correctAnswers + '</h4></div>');
         }
     }else {
         numberOfAttempts++;
-        alert(numberOfAttempts);
-    	var combinedWrong = '#myModal-'+counter+'-wrong';
+        //alert(numberOfAttempts);
+    	var combinedWrong = '#my-modal-'+counter+'-wrong';
         //alert(combined);
         $(combinedWrong).modal('show');
     	//alert("Awesome, you got the correct answer!");
@@ -93,6 +94,14 @@ function hideShow(){
     hideQuestion();
     showNextQuestion();
 }
+
+
+
+//If user clicks the onion skin on the correct modal, run hideshow function
+/*$("#myModal").on("hide.bs.modal", function () {
+    hideShow();
+});*/
+$('.modal-correct').click(hideShow);
 
 
 
