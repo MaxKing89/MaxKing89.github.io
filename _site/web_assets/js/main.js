@@ -20,6 +20,7 @@ var answers = {
 // end answer array
 
 var counter = 1;
+var correctAnswers = 0;
 
 
 
@@ -49,6 +50,7 @@ function checkResponse(el){
     var thisAnswer = getAnswer();
     var param = el;
     var thisResponse = getResponse(param);
+    var numberOfAttempts;
     
     //if statement to compare to see if thisAnswer = this response
     
@@ -57,7 +59,16 @@ function checkResponse(el){
         //alert(combined);
         $(combinedRight).modal('show');
     	//alert("Awesome, you got the correct answer!");
+        alert(numberOfAttempts);
+        if(numberOfAttempts >0){
+            $( ".correct-answers" ).append( correctAnswers );
+        }else{
+            correctAnswers++;
+            $( ".correct-answers" ).append( correctAnswers );
+        }
     }else {
+        numberOfAttempts++;
+        alert(numberOfAttempts);
     	var combinedWrong = '#myModal-'+counter+'-wrong';
         //alert(combined);
         $(combinedWrong).modal('show');
