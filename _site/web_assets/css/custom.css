@@ -146,3 +146,33 @@ nav.navbar{
    -webkit-transition: all 0.4s ease;
    transition: all 0.4s ease;
 }
+
+
+/*---------------------------------Interactive Resume Page--------------------------------------*/
+.interactive-resume h2 {
+    font-size: 4em;
+}
+
+.interactive-resume {
+    padding-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------ Footer-------------------------------------------------- */
+.footer{
+    padding-top: 15px;
+}
