@@ -14,6 +14,12 @@ var answers = {
     answer2 : "Tesla Model 3",
     answer3 : "My dog, Arnold",
     answer4 : "Snowboarding",
+    answer5 : "Pizza",
+    answer6 : "Golfing",
+    answer7 : "NHL 17",
+    answer8 : "Mexico",
+    answer9 : "Elon Musk",
+    answer10 : "Red Hot Chili Peppers",
     
 }
 
@@ -66,6 +72,12 @@ function checkResponse(el){
             correctAnswers++;
            $( "#number-correct" ).remove(  );
             $( ".number" ).append( '<div class="number-current" id="number-correct"><h4>' + correctAnswers + '</h4></div>');
+            
+        
+            if('#question-11'){
+                //append the final total score at end of quiz
+                $('.final-score-number').append('.number');
+            }
         }
     }else {
         numberOfAttempts++;
@@ -101,7 +113,9 @@ function hideShow(){
 /*$("#myModal").on("hide.bs.modal", function () {
     hideShow();
 });*/
-$('.modal-correct').click(hideShow);
+$('.modal-correct').on('hide.bs.modal', hideShow);
+
+
 
 
 
