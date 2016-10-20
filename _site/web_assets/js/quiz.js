@@ -1,115 +1,115 @@
-//quiz question and answers
-var questions = [{
-    question: "What is Max's Favorite Sport?",
-    answer: "Hockey",
-    wrongAnswer1:"Soccer",
-    wrongAnswer2:"Football",
-    wrongAnswer3:"Spelunking",
-    picture: "test.jpg"
-},{
-    question: "What do I want for my next car?",
-    answer: "Tesla",
-    wrongAnswer1:"Porshe F-150",
-    wrongAnswer2:"Stingray Corvette",
-    wrongAnswer3:"car 4",
-    picture: "test2.jpg"
-}, {
-    question: "What was the best money I have ever spent",
-    answer: "On a pet",
-    wrongAnswer1:"On a tv",
-    wrongAnswer2:"On a hockey stick",
-    wrongAnswer3:"On a computer",
-    picture: "testpic3.jpg",
-}, {
-    question: "Who do I love",
-    answer: "Gilly",
-    wrongAnswer1:"Jen Ann",
-    wrongAnswer2:"Whoopy Goldberg",
-    wrongAnswer3:"HIllary Clinton",
-    picture: "testpic3.jpg",
-    }             
-];
+// answers arrary
 
-
-//first function for question 1
-function showBuilder(question, answer, wrongAnswer1, wrongAnswer2, wrongAnswer3, picture){
+var answers = {
+    answer1 : "Hockey",
+    answer2 : "Tesla Model 3",
+    answer3 : "My dog, Arnold",
+    answer4 : "Snowboarding",
+    answer5 : "Pizza",
+    answer6 : "Golfing",
+    answer7 : "NHL 17",
+    answer8 : "Mexico",
+    answer9 : "Elon Musk",
+    answer10 : "Red Hot Chili Peppers",
     
-    $('#question-first').html('<div><h1>' + question + '</h1><button type="button" class="btn btn-primary btn-lg btn-block answer" id="1" onclick="magicMaker(this.id)">' + answer + '</button><button type="button" class="btn btn-primary btn-lg btn-block" id="2" onclick="magicMaker(this.id)">' + wrongAnswer1 + '</button><button type="button" class="btn btn-primary btn-lg btn-block" id="3" onclick="magicMaker(this.id)">' + wrongAnswer2 + '</button><button type="button" class="btn btn-primary btn-lg btn-block" id="4" onclick="magicMaker(this.id)">' + wrongAnswer3+ '</button></div>');
 }
-//function to build all other questions that will default as hidden
-function hideBuilder(question, answer, wrongAnswer1, wrongAnswer2, wrongAnswer3, picture){
-    
-    $('.questions-' + length).append('<div><h1>' + question + '</h1><button type="button" class="btn btn-primary btn-lg btn-block">' + answer + '</button><button type="button" class="btn btn-primary btn-lg btn-block">' + wrongAnswer1 + '</button><button type="button" class="btn btn-primary btn-lg btn-block">' + wrongAnswer2 + '</button><button type="button" class="btn btn-primary btn-lg btn-block">' + wrongAnswer3+ '</button></div>');
-}
+// end answer array
 
-//create divs
-function createDivs(length){
-    console.log('length is  ' + length);
-    for(i = 0; i < length; length--){
-        $('#questions').append('<div class="questions-' + length + ' hide" id="questions-' + length +'"></div>');  
-        console.log(length + " iterations");
-    }
-}
-//return the answer for the current element
+//Set counter and initial amount of correct answers
+
+var counter = 1;
+var correctAnswers = 0;
+
+//get answer from the answer array
+
 function getAnswer(){
-   var currentAnswer = $('.answer').html();
-    console.log(currentAnswer + " is the current answer");
-    alert(currentAnswer);
-    return currentAnswer;
-}
-
-//return the clicked function html
-function getElem(clickedElem){
-    var thisElement = $('#' + clickedElem).html();
-    console.log(thisElement + " is the current element");
-    alert(thisElement);
-    return thisElement;
-}
-
-function showNext(){
-    $('id="questions-' + length +'"').remove('.hide');
-}
-
-//compare the answer to the element html
-function magicMaker(clicked_ID){
-    theAnswer = getAnswer();
-    theElement = getElem(clicked_ID);
-    console.log("the answer is " + theAnswer);
-    console.log("the element is " + theElement);
+    var answer = "answer";
+    var current = counter;
+    var currentAnswer = answer+counter;
+    var thisAnswer = answers[currentAnswer];
+    /*console.log(counter);
+    console.log(thisAnswer);
+    alert(thisAnswer);*/
+    return thisAnswer;
     
-    if(theAnswer === theElement){
-        alert("Awesome, you got it right!");
-        showNext(); 
-    } else {
-        alert("Sorry thats not the right answer");
+}
+
+//get the response the user clicked on
+
+function getResponse(el){
+   var userAnswer = el.innerHTML;
+    /*alert(userAnswer);
+    console.log(userAnswer);*/
+    return userAnswer;
+}
+
+// set initial number of attempts to 1
+var numberOfAttempts =1;
+
+
+//see if the ansewr matches the response
+function checkResponse(el){
+    var thisAnswer = getAnswer();
+    var param = el;
+    var thisResponse = getResponse(param);
+   
+    
+    //if statement to compare to see if thisAnswer = this response
+    
+    if (thisAnswer === thisResponse){
+        var combinedRight = '#my-modal-'+counter+'-correct';
+        //alert(combined);
+        //show modal for correct answer
+        $(combinedRight).modal('show');
+    	//alert("Awesome, you got the correct answer!");
+        //alert(numberOfAttempts);
+        //if number of attempts is greater than one do not add to the correct score variable if not add to correct score
+        if(numberOfAttempts >1){
+             numberOfAttempts = 1;
+        }else{
+            correctAnswers++;
+           $( "#number-correct" ).remove(  );
+            $( ".number" ).append( '<div class="number-current" id="number-correct"><h4>' + correctAnswers + '</h4></div>');
+            
+        
+            if('#question-11'){
+                //append the final total score at end of quiz
+                $('.final-score-number').append('.number');
+            }
+        }
+    }else {
+        numberOfAttempts++;
+        //alert(numberOfAttempts);
+    	var combinedWrong = '#my-modal-'+counter+'-wrong';
+        //alert(combined);
+        $(combinedWrong).modal('show');
+    	//alert("Awesome, you got the correct answer!");
     }
 }
 
 
-//add the selected class
-$('#question-first').click(function(){
-    $(this).addClass('selected');
-  });
+//hide question after successfully answering it 
+    function hideQuestion(){
+         var questionToHide = '#question-'+counter;
+        $(questionToHide).hide();
+        counter++;
+    }
+//show next question
+function showNextQuestion(){
+            var questionToShow = '#question-'+counter;
+            $(questionToShow).removeClass('hide');
+        }
+//run both functions
+function hideShow(){
+    hideQuestion();
+    showNextQuestion();
+}
 
-var length = questions.length;
 
-var counter = 0;
 
-var question1 = showBuilder(questions[counter].question, questions[counter].answer, questions[counter].wrongAnswer1, questions[counter].wrongAnswer2, questions[counter].wrongAnswer3, questions[counter].picture);
-length--;
-
-var createdDivs = createDivs(length);
-
-var objects = $.each(questions, function(index,val){
-    
-    $.each(val,function(key,value){
-
-        console.log(counter);
-        
-        var questions2 = hideBuilder(questions[counter].question, questions[counter].answer, questions[counter].wrongAnswer1, questions[counter].wrongAnswer2, questions[counter].wrongAnswer3, questions[counter].picture);
-
-          /* $('body').html('<div><h1>' + questions[0].question + '</h1><button type="button" class="btn btn-primary btn-lg btn-block">' + questions[0].answer +'</button><button type="button" class="btn btn-primary btn-lg btn-block">' + questions[0].wrongAnswer1 + '</button><button type="button" class="btn btn-primary btn-lg btn-block">' + questions[0].wrongAnswer2 + '</button><button type="button" class="btn btn-primary btn-lg btn-block">' + questions[0].wrongAnswer3 + '</button></div>');*/
-        counter ++;
-    
-    });
-});
+//If user clicks the onion skin on the correct modal, run hideshow function
+/*$("#myModal").on("hide.bs.modal", function () {
+    hideShow();
+});*/
+//when the correct modal is closed run the hideshow function
+$('.modal-correct').on('hide.bs.modal', hideShow);
