@@ -1,0 +1,26 @@
+body {
+  padding: 2rem;
+}
+
+.media-object {
+  width: 12rem;
+  border-radius: 50%;
+}
+.media-left {
+  padding-right: 2rem;
+}
+
+.media-body {
+  h1 {
+    margin: 0 0 .5rem 0;
+    font-size: 2.8rem;
+  }
+  p {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+}
+.contact-item {
+/*   display: inline-block; */
+  padding-right: 2rem;
+}

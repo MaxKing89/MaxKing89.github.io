@@ -149,9 +149,7 @@ nav.navbar{
 
 
 /*---------------------------------Interactive Resume Page--------------------------------------*/
-.interactive-resume h2 {
-    font-size: 4em;
-}
+
 
 .interactive-resume {
     padding-top: 15px;
@@ -161,8 +159,20 @@ nav.navbar{
     vertical-align: middle;
 }
 
+.details-bar{
+    padding-top: 7px;
+}
 
-
+.is-table-row {
+    display: table;
+    width: 100%;
+    
+}
+.is-table-row [class*="col-"] {
+        float: none;
+        display: table-cell;
+        vertical-align: middle;
+    }
 
 
 
