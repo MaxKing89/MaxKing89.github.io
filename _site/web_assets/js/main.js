@@ -7,6 +7,16 @@ $(window).scroll(function() {
   }
 });
 
+//upate active class
+var activeNav;
+    $(".nav a").on("click", function(){
+    $(".nav").find(".active").removeClass("active");
+    $(this).parent().addClass("active");
+    activeNav = $(this).parent();
+    console.log(activeNav);
+});
+
+$(document).ready($(activeNav).addClass("active"));
 
 
 
