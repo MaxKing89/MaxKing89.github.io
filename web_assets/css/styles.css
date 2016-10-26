@@ -18,4 +18,57 @@ body {
 .contact-item {
   padding-right: 2rem; }
 
+.interactive-resume {
+  background-color: azure; }
+
+body {
+  background: url(../img/home/background.jpg) no-repeat 50% 50% fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.social-bar {
+  line-height: 60px;
+  text-align: center; }
+  @media screen and (max-width: 767px) {
+    .social-bar {
+      line-height: 1.5; } }
+
+.fa-facebook-square,
+.fa-linkedin-square,
+.fa-envelope-o,
+.fa-phone {
+  font-size: 30px;
+  line-height: 60px; }
+
+.footer-text {
+  line-height: 60px;
+  font-size: 30px; }
+
+.fb-link {
+  display: inline-block;
+  color: #3b5998;
+  transition: all .2s ease-in-out; }
+  .fb-link:hover {
+    transform: scale(1.1);
+    color: #2d4373; }
+
+.linkedin-link {
+  display: inline-block;
+  color: #0077b5;
+  transition: all .2s ease-in-out; }
+  .linkedin-link:hover {
+    transform: scale(1.1);
+    color: #005582; }
+
+.table-item + .table-item {
+  padding-left: 10px; }
+
+.space {
+  padding: 0 10px; }
+
+.quiz {
+  background-color: azure; }
+
 /*# sourceMappingURL=styles.css.map */
