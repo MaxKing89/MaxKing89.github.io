@@ -7,8 +7,8 @@ body.game {
     .correct-answers {
         padding: 10px;
         h3, h4 {
-            font-size: 1em;
-            color: #66fca6;
+            font-size: 1.5em;
+            color: azure;
         }
     }
     
@@ -20,7 +20,7 @@ body.game {
     }
     .quiz{
         background: black;
-        border-color: #66fca6;
+        border-color: azure;
         border-radius: 6px;
         border-style: solid;
     }
