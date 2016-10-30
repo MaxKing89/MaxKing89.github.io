@@ -20,6 +20,11 @@ body {
 
 .interactive-resume {
   background-color: azure; }
+  .interactive-resume .row {
+    padding: 5px; }
+
+.b-school-logo {
+  padding: 10px; }
 
 body {
   background: url(../img/home/background.jpg) no-repeat 50% 50% fixed;
@@ -27,6 +32,9 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
+
+.logo {
+  padding: 60px 40px; }
 
 .social-bar {
   line-height: 60px;
@@ -38,13 +46,11 @@ body {
 .fa-facebook-square,
 .fa-linkedin-square,
 .fa-envelope-o,
-.fa-phone {
-  font-size: 30px;
-  line-height: 60px; }
-
+.fa-phone,
 .footer-text {
+  font-size: 2rem;
   line-height: 60px;
-  font-size: 30px; }
+  color: black; }
 
 .fb-link {
   display: inline-block;
@@ -68,8 +74,84 @@ body {
 .space {
   padding: 0 10px; }
 
-.quiz {
-  background-color: azure;
-  margin: 20px; }
+footer.navbar-bottom {
+  background-color: #66fcf1;
+  border-color: black;
+  border: 1px solid;
+  border-radius: 6px;
+  margin-top: 15px; }
+
+@media (max-width: 767px) {
+  .pipe {
+    display: none; }
+
+  .fa-facebook-square,
+  .fa-linkedin-square,
+  .fa-envelope-o,
+  .fa-phone,
+  .footer-text {
+    font-size: 1.4rem;
+    line-height: 30px; } }
+@media (max-width: 1200px) {
+  .fa-envelope-o {
+    display: none; } }
+body.game {
+  color: darkgray; }
+  body.game .title {
+    text-align: center; }
+  body.game .correct-answers {
+    padding: 10px; }
+    body.game .correct-answers h3, body.game .correct-answers h4 {
+      font-size: 1em;
+      color: #66fca6; }
+  body.game .question {
+    padding: 10px; }
+    body.game .question h2 {
+      padding: 15px; }
+  body.game .quiz {
+    background: black;
+    border-color: #66fca6;
+    border-radius: 6px;
+    border-style: solid; }
+  body.game .btn {
+    background-color: #66fcf1;
+    color: black; }
+  body.game .modal-title {
+    color: black;
+    font-size: 3rem; }
+
+.btn-menu .lines {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 27px;
+  vertical-align: middle;
+  z-index: 1; }
+
+.header .btn-menu {
+  float: left;
+  position: fixed; }
+
+@media (max-width: 1024px) {
+  .header .btn-menu {
+    left: 30px; } }
+.btn-menu.js-toggle-menu {
+  background: black;
+  border: none; }
+
+.btn-menu .lines span {
+  display: block;
+  margin-top: 3px;
+  height: 5px;
+  width: 100%;
+  background: #66fcf1; }
+
+#nav-options li {
+  width: 100%; }
+#nav-options #close-modal {
+  width: 100%; }
+
+nav.navbar {
+  background: #66fcf1; }
 
 /*# sourceMappingURL=styles.css.map */

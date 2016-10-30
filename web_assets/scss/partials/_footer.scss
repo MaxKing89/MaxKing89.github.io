@@ -12,15 +12,13 @@ $color-linkedin: #0077b5;
 .fa-facebook-square,
 .fa-linkedin-square,
 .fa-envelope-o,
-.fa-phone {
-  font-size: 30px;
+.fa-phone,
+.footer-text {
+  font-size: 2rem;
   line-height: 60px;
+  color: black;
 }
 
-.footer-text {
-    line-height: 60px;
-    font-size: 30px;
-}
 
 .fb-link {
     display: inline-block;
@@ -49,4 +47,39 @@ $color-linkedin: #0077b5;
 
 .space {
     padding: 0 10px;
+}
+
+footer.navbar-bottom {
+    background-color: #66fcf1;
+    border-color: black;
+    border: 1px solid;
+    border-radius: 6px;
+    margin-top: 15px;
+    
+    
+}
+
+
+// Mobile Media Query
+
+@media (max-width: 767px) {
+    .pipe {
+        display: none;
+    }
+    
+    .fa-facebook-square,
+.fa-linkedin-square,
+.fa-envelope-o,
+.fa-phone,
+.footer-text {
+  font-size: 1.4rem;
+  line-height: 30px;
+}
+}
+
+//MEDIUM MEDIA QUERY
+@media (max-width: 1200px) {
+    .fa-envelope-o {
+        display: none;
+    }
 }

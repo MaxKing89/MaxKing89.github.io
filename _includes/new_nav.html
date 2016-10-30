@@ -1,0 +1,30 @@
+<button class="btn-menu js-toggle-menu" data-toggle="modal" data-target="#nav-options">
+           <p>MENU</p>
+            <span class="lines">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+        
+        <div class="modal fade" id="nav-options" tabindex="-1" role="dialog">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Take a look around</h4>
+              </div>
+              <div class="modal-body">
+                    <ul class="nav navbar-nav">
+                            <li class="{% if page.title == 'home' %} active {% endif %}"><a href="../index.html">Home</a></li>
+                            <li class="{% if page.title == 'game' %} active {% endif %}"><a href="../pages/page-game-non_dynamic.html">Get to know me game</a></li>
+                            <li class="{% if page.title == 'interactive resume' %} active {% endif %}"><a href="../pages/interactive-resume.html">Interactive Resume</a></li>
+                            <li class="{% if page.title == 'about' %} active {% endif %}"><a href="/pages/about.html">About Me</a></li>
+                        </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="close-modal" data-dismiss="modal">Close</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->

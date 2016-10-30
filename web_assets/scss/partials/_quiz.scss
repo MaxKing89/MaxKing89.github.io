@@ -1,4 +1,44 @@
-.quiz {
-    background-color: azure;
-    margin: 20px;
+
+
+body.game {
+    .title {
+        text-align: center;
+    }
+    .correct-answers {
+        padding: 10px;
+        h3, h4 {
+            font-size: 1em;
+            color: #66fca6;
+        }
+    }
+    
+    .question {
+        padding: 10px;
+        h2 {
+            padding: 15px;
+        }
+    }
+    .quiz{
+        background: black;
+        border-color: #66fca6;
+        border-radius: 6px;
+        border-style: solid;
+    }
+    
+    .btn{
+        background-color: #66fcf1;
+        color: black;
+    }
+    
+    .modal-title {
+        color: black;
+        font-size: 3rem;
+    }
+    
+    
+    
+    
+    
+    color: darkgray;
+    
 }

@@ -1,0 +1,50 @@
+
+
+.btn-menu .lines {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 27px;
+    vertical-align: middle;
+    z-index: 1;
+    
+}
+
+.header .btn-menu {
+    float: left;
+    position: fixed;
+}
+
+@media (max-width: 1024px){
+.header .btn-menu {
+    left: 30px;
+    }
+}
+
+.btn-menu.js-toggle-menu {
+    background: black;
+    border: none;
+}
+
+.btn-menu .lines span {
+    display: block;
+    margin-top: 3px;
+    height: 5px;
+    width: 100%;
+    background: #66fcf1;
+}
+
+#nav-options{
+    li {
+    width: 100%;
+}
+    #close-modal{
+        width: 100%;
+    }
+}
+    
+nav.navbar {
+    background: #66fcf1;
+}
+
+
