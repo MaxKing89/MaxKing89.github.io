@@ -69,7 +69,7 @@ function checkResponse(el){
         }else{
             correctAnswers++;
            $( "#number-correct" ).remove(  );
-            $( ".number" ).append( '<div class="number-current" id="number-correct"><h4>' + correctAnswers + '</h4></div>');
+            $( ".number" ).append( '<div class="number-current" id="number-correct"><h3>' + correctAnswers + '</h3></div>');
             
         
             if('#question-11'){
