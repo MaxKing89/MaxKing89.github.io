@@ -166,5 +166,16 @@ nav.navbar {
 @media (max-width: 1200px) {
   span.name {
     display: none; } }
+.about-carousel {
+  width: 100%;
+  margin: auto; }
+
+.centered {
+  margin: auto; }
+
+.about {
+  background-color: azure; }
+  .about .row {
+    padding: 20px; }
 
 /*# sourceMappingURL=styles.css.map */
