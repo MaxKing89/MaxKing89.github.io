@@ -91,6 +91,11 @@ hr {
 .dotted hr {
   border-top: 2px dotted black; }
 
+.btn-black {
+  background-color: black;
+  border-bottom-color: #66FCF1;
+  margin-bottom: 15px; }
+
 body {
   background: url(../img/home/background.jpg) no-repeat 50% 50% fixed;
   -webkit-background-size: cover;
