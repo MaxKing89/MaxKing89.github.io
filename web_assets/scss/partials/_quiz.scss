@@ -1,6 +1,12 @@
 
 
-body.game {
+.quiz {
+    
+        background: black;
+        border-color: azure;
+        border-radius: 6px;
+        border-style: solid;
+    
     h2 {
         padding: 0 15px;
     }
@@ -23,10 +29,7 @@ body.game {
         }
     }
     .quiz{
-        background: black;
-        border-color: azure;
-        border-radius: 6px;
-        border-style: solid;
+       
     }
     
     .btn{
@@ -36,6 +39,11 @@ body.game {
     }
     
     .btn:focus {
+        background-color: azure;
+        color: black;
+    }
+    
+    .btn:hover {
         background-color: azure;
         color: black;
     }

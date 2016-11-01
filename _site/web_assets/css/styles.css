@@ -193,31 +193,33 @@ footer .navbar-bottom {
   .social-bar .footer-text {
     font-size: 1.6rem;
     color: black; } }
-body.game {
+.quiz {
+  background: black;
+  border-color: azure;
+  border-radius: 6px;
+  border-style: solid;
   color: darkgray; }
-  body.game h2 {
+  .quiz h2 {
     padding: 0 15px; }
-  body.game .title {
+  .quiz .title {
     text-align: center; }
-  body.game .correct-answers {
+  .quiz .correct-answers {
     padding: 10px; }
-    body.game .correct-answers h3, body.game .correct-answers h4 {
+    .quiz .correct-answers h3, .quiz .correct-answers h4 {
       font-size: 1.5em;
       color: #66fcf1; }
-  body.game .question {
+  .quiz .question {
     padding: 10px; }
-  body.game .quiz {
-    background: black;
-    border-color: azure;
-    border-radius: 6px;
-    border-style: solid; }
-  body.game .btn {
+  .quiz .btn {
     background-color: #66fcf1;
     color: black; }
-  body.game .btn:focus {
+  .quiz .btn:focus {
     background-color: azure;
     color: black; }
-  body.game .modal-title {
+  .quiz .btn:hover {
+    background-color: azure;
+    color: black; }
+  .quiz .modal-title {
     color: black;
     font-size: 3rem; }
 
@@ -226,6 +228,9 @@ body.game {
 
 .quiz .correct-answers {
   color: #66fcf1; }
+
+body {
+  font-family: 'Itim', cursive; }
 
 .btn-menu .lines {
   position: relative;
