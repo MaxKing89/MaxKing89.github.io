@@ -179,17 +179,17 @@ footer .navbar-bottom {
     color: black; } }
 body.game {
   color: darkgray; }
+  body.game h2 {
+    padding: 0 15px; }
   body.game .title {
     text-align: center; }
   body.game .correct-answers {
     padding: 10px; }
     body.game .correct-answers h3, body.game .correct-answers h4 {
       font-size: 1.5em;
-      color: azure; }
+      color: #66fcf1; }
   body.game .question {
     padding: 10px; }
-    body.game .question h2 {
-      padding: 15px; }
   body.game .quiz {
     background: black;
     border-color: azure;
@@ -204,6 +204,9 @@ body.game {
 
 .question h2 {
   color: azure; }
+
+.quiz .correct-answers {
+  color: #66fcf1; }
 
 .btn-menu .lines {
   position: relative;
