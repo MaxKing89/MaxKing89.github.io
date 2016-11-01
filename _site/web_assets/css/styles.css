@@ -339,6 +339,9 @@ nav.navbar {
 @media (max-width: 650px) {
   .about-carousel {
     width: 100%; } }
+.about-2 h1 {
+  font-size: 30px; }
+
 a {
   color: black;
   text-decoration: underline; }
