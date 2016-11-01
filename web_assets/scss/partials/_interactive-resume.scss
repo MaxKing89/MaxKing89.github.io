@@ -40,11 +40,7 @@ body {
     padding: 10px;
 }
 
-@media (max-width: 996px) {
-    .media-object {
-        margin: auto;
-    }
-}
+
 
 .bottom-bar {
     margin-top: 20px;
@@ -88,7 +84,7 @@ body {
 
 .main-header {
     background-color: black;
-    text-align: right;
+    text-align: center;
     p {
         color: grey;
     }
@@ -158,4 +154,13 @@ hr {
 .email a {
     color: gray;
     text-decoration: underline;
+}
+
+@media (max-width: 996px) {
+    .media-object {
+        margin: auto;
+    }
+    .main-header .media {
+        text-align: center;
+    }
 }

@@ -30,9 +30,6 @@ body {
 .b-school-logo {
   padding: 10px; }
 
-@media (max-width: 996px) {
-  .media-object {
-    margin: auto; } }
 .bottom-bar {
   margin-top: 20px; }
 
@@ -62,7 +59,7 @@ body {
 
 .main-header {
   background-color: black;
-  text-align: right; }
+  text-align: center; }
   .main-header p {
     color: grey; }
   .main-header .fa {
@@ -116,6 +113,12 @@ hr {
   color: gray;
   text-decoration: underline; }
 
+@media (max-width: 996px) {
+  .media-object {
+    margin: auto; }
+
+  .main-header .media {
+    text-align: center; } }
 body {
   background: url(../img/home/background.jpg) no-repeat 50% 50% fixed;
   -webkit-background-size: cover;
@@ -302,6 +305,25 @@ nav.navbar {
 @media (max-width: 1200px) {
   span.name {
     display: none; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-collapse.collapse {
+    display: none !important; }
+
+  .navbar-collapse.collapse.in {
+    display: block !important; }
+
+  .navbar-header .collapse, .navbar-toggle {
+    display: block !important; }
+
+  .navbar-header {
+    float: none;
+    width: 100%; }
+
+  .navbar-nav > li {
+    float: none; }
+
+  div#navbar {
+    margin-bottom: 10px; } }
 .about-carousel {
   width: 75%;
   margin: auto; }
