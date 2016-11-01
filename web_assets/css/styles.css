@@ -192,6 +192,9 @@ body.game {
     color: black;
     font-size: 3rem; }
 
+.question h2 {
+  color: azure; }
+
 .btn-menu .lines {
   position: relative;
   display: inline-block;
