@@ -124,7 +124,6 @@ body {
 .footer .fa-phone,
 .footer .footer-text {
   font-size: 2rem;
-  line-height: 60px;
   color: black; }
 
 .fb-link {
@@ -170,10 +169,14 @@ footer .navbar-bottom {
 @media (max-width: 1200px) {
   .social-bar .fa-envelope-o {
     display: none; } }
-@media (min-width: 770px) {
-  .footer-elem {
-    height: 30px;
-    line-height: 30px; } }
+@media screen and (max-width: 370px) {
+  .social-bar .fa-facebook-square,
+  .social-bar .fa-linkedin-square,
+  .social-bar .fa-envelope-o,
+  .social-bar .fa-phone,
+  .social-bar .footer-text {
+    font-size: 1.6rem;
+    color: black; } }
 body.game {
   color: darkgray; }
   body.game .title {

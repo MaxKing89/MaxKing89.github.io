@@ -4,9 +4,10 @@ $color-linkedin: #0077b5;
 .social-bar {
     line-height: 60px;
     text-align: center;
-  @media screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
     line-height: 1.5;
   }
+    
 }
 
 .footer {
@@ -17,7 +18,6 @@ $color-linkedin: #0077b5;
     .fa-phone,
     .footer-text {
       font-size: 2rem;
-      line-height: 60px;
       color: black;
     }
 }
@@ -70,7 +70,7 @@ footer .navbar-bottom {
         display: none;
     }
     
-    .fa-facebook-square,
+.fa-facebook-square,
 .fa-linkedin-square,
 .fa-envelope-o,
 .fa-phone,
@@ -90,12 +90,17 @@ footer .navbar-bottom {
 }
 
 
-@media (min-width: 770px) {
-    .footer-elem {
-        height: 30px;
-        line-height: 30px;
+@media screen and (max-width: 370px) {
+    .social-bar {
+        .fa-facebook-square,
+        .fa-linkedin-square,
+        .fa-envelope-o,
+        .fa-phone,
+        .footer-text {
+          font-size: 1.6rem;
+          color: black;
+    }
     }
 }
-
 
 
