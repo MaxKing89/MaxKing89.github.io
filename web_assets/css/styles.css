@@ -112,6 +112,10 @@ hr {
   background-color: #66FCF1;
   color: black; }
 
+.email a {
+  color: gray;
+  text-decoration: underline; }
+
 body {
   background: url(../img/home/background.jpg) no-repeat 50% 50% fixed;
   -webkit-background-size: cover;
@@ -231,6 +235,19 @@ footer .navbar-bottom {
 @media (max-width: 650px) {
   .quiz #my-modal-3-correct {
     width: 100%; } }
+.quiz .modal-body h4 {
+  color: gray; }
+
+.margin-needed {
+  margin: auto; }
+
+.width-needed {
+  width: 70%; }
+
+#question-11 a {
+  color: white;
+  text-decoration: underline; }
+
 body {
   font-family: 'Itim', cursive;
   font-size: 1.8em; }
