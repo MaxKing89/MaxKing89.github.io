@@ -68,3 +68,9 @@
 .quiz .correct-answers {
     color: #66fcf1;
 }
+
+@media (max-width: 650px) {
+    .quiz #my-modal-3-correct {
+        width: 100%;
+    }
+}

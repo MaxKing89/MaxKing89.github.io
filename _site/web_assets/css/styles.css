@@ -229,6 +229,9 @@ footer .navbar-bottom {
 .quiz .correct-answers {
   color: #66fcf1; }
 
+@media (max-width: 650px) {
+  .quiz #my-modal-3-correct {
+    width: 100%; } }
 body {
   font-family: 'Itim', cursive; }
 
@@ -277,7 +280,7 @@ nav.navbar {
   span.name {
     display: none; } }
 .about-carousel {
-  width: 100%;
+  width: 75%;
   margin: auto; }
 
 .centered {
@@ -287,5 +290,9 @@ nav.navbar {
   background-color: azure; }
   .about .row {
     padding: 20px; }
+
+@media (max-width: 650px) {
+  .about-carousel {
+    width: 100%; } }
 
 /*# sourceMappingURL=styles.css.map */
