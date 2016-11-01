@@ -1,6 +1,17 @@
 body {
     font-family: 'Itim', cursive;
+    font-size: 1.8em;
+
 }
+
+.navbar-inverse .navbar-nav>li>a, span.name{
+    color: black;
+    
+}
+
+span.name:hover {
+        color: azure;
+    }
 
 .btn-menu .lines {
     position: relative;
@@ -49,7 +60,9 @@ nav.navbar {
     background: #66fcf1;
 }
 
-.logo {
+
+
+.navbar-header .logo {
     padding: 60px 40px;
 }
 

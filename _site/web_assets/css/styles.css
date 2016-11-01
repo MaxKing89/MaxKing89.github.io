@@ -166,8 +166,7 @@ body {
 
 footer .navbar-bottom {
   background-color: #66fcf1;
-  border-color: black;
-  border: 1px solid;
+  border: 1px solid black;
   border-radius: 6px;
   margin-top: 30px; }
 
@@ -233,7 +232,14 @@ footer .navbar-bottom {
   .quiz #my-modal-3-correct {
     width: 100%; } }
 body {
-  font-family: 'Itim', cursive; }
+  font-family: 'Itim', cursive;
+  font-size: 1.8em; }
+
+.navbar-inverse .navbar-nav > li > a, span.name {
+  color: black; }
+
+span.name:hover {
+  color: azure; }
 
 .btn-menu .lines {
   position: relative;
@@ -269,7 +275,7 @@ body {
 nav.navbar {
   background: #66fcf1; }
 
-.logo {
+.navbar-header .logo {
   padding: 60px 40px; }
 
 .navbar-header #logo {
@@ -294,5 +300,8 @@ nav.navbar {
 @media (max-width: 650px) {
   .about-carousel {
     width: 100%; } }
+a {
+  color: black;
+  text-decoration: underline; }
 
 /*# sourceMappingURL=styles.css.map */
