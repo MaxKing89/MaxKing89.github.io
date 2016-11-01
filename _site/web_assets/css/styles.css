@@ -96,6 +96,22 @@ hr {
   border-bottom-color: #66FCF1;
   margin-bottom: 15px; }
 
+.btn-black:focus {
+  background-color: #66FCF1;
+  color: black; }
+
+.btn-black:hover {
+  background-color: #66FCF1;
+  color: black; }
+
+.btn-black:active {
+  background-color: #66FCF1;
+  color: black; }
+
+.btn-black:active:focus {
+  background-color: #66FCF1;
+  color: black; }
+
 body {
   background: url(../img/home/background.jpg) no-repeat 50% 50% fixed;
   -webkit-background-size: cover;
@@ -197,6 +213,9 @@ body.game {
     border-style: solid; }
   body.game .btn {
     background-color: #66fcf1;
+    color: black; }
+  body.game .btn:focus {
+    background-color: azure;
     color: black; }
   body.game .modal-title {
     color: black;

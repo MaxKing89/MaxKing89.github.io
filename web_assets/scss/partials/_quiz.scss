@@ -32,6 +32,12 @@ body.game {
     .btn{
         background-color: #66fcf1;
         color: black;
+        
+    }
+    
+    .btn:focus {
+        background-color: azure;
+        color: black;
     }
     
     .modal-title {
