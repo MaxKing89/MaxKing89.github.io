@@ -119,6 +119,10 @@ hr {
 
   .main-header .media {
     text-align: center; } }
+.download-resume {
+  text-align: center;
+  color: azure; }
+
 body {
   background: url(../img/home/background.jpg) no-repeat 50% 50% fixed;
   -webkit-background-size: cover;
