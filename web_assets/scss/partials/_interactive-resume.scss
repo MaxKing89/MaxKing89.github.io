@@ -28,11 +28,26 @@ body {
   padding-right: 2rem;
 }
 
-.interactive-resume{
+.interactive-resume {
     background-color: azure;
     padding: 15px;
     .row {
         padding: 5px;
+    }
+    .btn{
+        background-color: #66fcf1;
+        color: black;
+        
+    }
+    
+    .btn:focus {
+        background-color: black;
+        color: azure;
+    }
+    
+    .btn:hover {
+        background-color: black;
+        color: azure;
     }
 }
 
@@ -168,6 +183,11 @@ hr {
 .download-resume {
     text-align: center;
     color: azure;
+}
+
+.interactive-resume .fa {
+    padding-left: 7px;
+    padding-right: 2px;
 }
 
 

@@ -26,6 +26,15 @@ body {
   padding: 15px; }
   .interactive-resume .row {
     padding: 5px; }
+  .interactive-resume .btn {
+    background-color: #66fcf1;
+    color: black; }
+  .interactive-resume .btn:focus {
+    background-color: black;
+    color: azure; }
+  .interactive-resume .btn:hover {
+    background-color: black;
+    color: azure; }
 
 .b-school-logo {
   padding: 10px; }
@@ -123,6 +132,10 @@ hr {
   text-align: center;
   color: azure; }
 
+.interactive-resume .fa {
+  padding-left: 7px;
+  padding-right: 2px; }
+
 body {
   background: url(../img/home/background.jpg) no-repeat 50% 50% fixed;
   -webkit-background-size: cover;
@@ -216,7 +229,7 @@ footer .navbar-bottom {
   .quiz .correct-answers {
     padding: 10px; }
     .quiz .correct-answers h3, .quiz .correct-answers h4 {
-      font-size: 1.5em;
+      font-size: 1.2em;
       color: #66fcf1; }
   .quiz .question {
     padding: 10px; }
@@ -328,6 +341,9 @@ nav.navbar {
 
   div#navbar {
     margin-bottom: 10px; } }
+.navbar-inverse .navbar-brand {
+  color: black; }
+
 .about-carousel {
   width: 75%;
   margin: auto; }

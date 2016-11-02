@@ -18,6 +18,13 @@ var activeNav;
 
 $(document).ready($(activeNav).addClass("active"));
 
+//stop youtube video on close of modal
+
+    $('#modal-video').on('hidden.bs.modal', function () {
+    $("#modal-video iframe").attr("src", $("#modal-video iframe").attr("src"));
+});
+
+
 
 
 
